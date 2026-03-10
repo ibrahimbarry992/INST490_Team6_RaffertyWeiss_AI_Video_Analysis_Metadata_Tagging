@@ -1,0 +1,46 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Search by Metadata</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input { padding: 5px; width: 300px; }
+        button { padding: 5px 10px; }
+        video { display: block; margin: 10px 0; max-width: 500px; }
+    </style>
+</head>
+<body>
+    <h1>Search Videos by Tags</h1>
+    <input type="text" id="searchInput" placeholder="Enter tag...">
+    <button onclick="searchVideos()">Search</button>
+    
+    <div id="results"></div>
+
+<!--possible search function
+    <script>
+ 
+        function searchVideos() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = ""; // clear previous results
+
+            const filtered = videoDatabase.filter(video => 
+                video.tags.some(tag => tag.toLowerCase().includes(query))
+            );
+
+            if (filtered.length === 0) {
+                resultsDiv.innerHTML = "<p>No videos found.</p>";
+            } else {
+                filtered.forEach(video => {
+                    const videoElement = document.createElement("video");
+                    videoElement.src = video.src;
+                    videoElement.controls = true;
+                    resultsDiv.appendChild(videoElement);
+                });
+            }
+        }
+    </script>
+-->
+</body>
+</html>
