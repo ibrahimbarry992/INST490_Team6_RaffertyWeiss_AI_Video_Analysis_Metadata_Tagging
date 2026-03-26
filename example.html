@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Video Search by Metadata</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        input { padding: 5px; width: 300px; }
-        button { padding: 5px 10px; }
-        video { display: block; margin: 10px 0; max-width: 500px; }
-        footer { margin-top: 20px; font-size: 0.9em; color: #000000; text-align: center; }
-    </style>
+    <link rel="stylesheet" href="INST490RWwebsite.css">
 </head>
+<header>
+    <img src="https://cdn.prod.website-files.com/66702cbde394e95ddec1cb9f/6673532cb1cd38fc438a1e11_logo-raff.png" alt="Company Logo" class="logo">
+  </header>
 <body>
     <h1>Search Videos by Tags</h1>
-    <input type="text" id="searchInput" placeholder="Enter tag...">
-    <button onclick="searchVideos()">Search</button>
-    <footer>Created by Team 6: Rafferty Weiss AI Video Analysis and Metadata Tagging</footer>
+    <div class = "search-container">
+        <input type="text" id="searchInput" placeholder="Enter tag...">
+        <button onclick="searchVideos()">Search</button>
+    </div>
+    
+    <footer class="footer">Created by Team 6: Rafferty Weiss AI Video Analysis and Metadata Tagging</footer>
     <div id="results"></div>
 
 <!--possible search function
