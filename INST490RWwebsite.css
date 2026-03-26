@@ -17,7 +17,29 @@ header {
     justify-content: center;
     display: flex;
 }
-button { padding: 5px 10px; }
+button, .btn, input[type="button"], input[type="submit"] {
+    padding: 6px 12px;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 200ms ease, transform 120ms ease, box-shadow 180ms ease;
+}
+
+button:hover, button:focus, .btn:hover, .btn:focus,
+input[type="button"]:hover, input[type="button"]:focus,
+input[type="submit"]:hover, input[type="submit"]:focus {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    outline: none;
+}
+
+button:active, .btn:active, input[type="button"]:active, input[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
 video { display: block; margin: 10px 0; max-width: 500px; }
 .footer {
     margin-top: 20px;
