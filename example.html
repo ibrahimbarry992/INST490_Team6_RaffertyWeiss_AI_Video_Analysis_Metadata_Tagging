@@ -3,44 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Video Search by Metadata</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        input { padding: 5px; width: 300px; }
-        button { padding: 5px 10px; }
-        video { display: block; margin: 10px 0; max-width: 500px; }
-    </style>
+    <link rel="stylesheet" href="INST490RWwebsite.css">
 </head>
+<header>
+    <img src="https://cdn.prod.website-files.com/66702cbde394e95ddec1cb9f/6673532cb1cd38fc438a1e11_logo-raff.png" alt="Company Logo" class="logo">
+  </header>
 <body>
     <h1>Search Videos by Tags</h1>
-    <input type="text" id="searchInput" placeholder="Enter tag...">
-    <button onclick="searchVideos()">Search</button>
-    
+    <div class = "search-container">
+        <input type="text" id="searchInput" placeholder="Enter tag...">
+        <button onclick="searchVideos()">Search</button>
+    </div>
+
+    <footer class="footer">Created by Team 6: Rafferty Weiss AI Video Analysis and Metadata Tagging</footer>
     <div id="results"></div>
+    
 
 <!--possible search function
-    <script>
- 
-        function searchVideos() {
-            const query = document.getElementById("searchInput").value.toLowerCase();
-            const resultsDiv = document.getElementById("results");
-            resultsDiv.innerHTML = ""; // clear previous results
+   <script>
+    async function searchVideos() {
+    const query = document.getElementById("searchInput").value;
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
 
-            const filtered = videoDatabase.filter(video => 
-                video.tags.some(tag => tag.toLowerCase().includes(query))
-            );
+    try {
+        const response = await fetch(`/api/videos?query=${encodeURIComponent(query)}`);
+        const data = await response.json();
 
-            if (filtered.length === 0) {
-                resultsDiv.innerHTML = "<p>No videos found.</p>";
-            } else {
-                filtered.forEach(video => {
-                    const videoElement = document.createElement("video");
-                    videoElement.src = video.src;
-                    videoElement.controls = true;
-                    resultsDiv.appendChild(videoElement);
-                });
-            }
+        if (data.length === 0) {
+            resultsDiv.innerHTML = "<p>No videos found.</p>";
+        } else {
+            data.forEach(video => {
+                const videoElement = document.createElement("video");
+                videoElement.src = video.src;
+                videoElement.controls = true;
+                resultsDiv.appendChild(videoElement);
+            });
         }
-    </script>
--->
+    } catch (error) {
+        console.error("Error fetching videos:", error);
+        resultsDiv.innerHTML = "<p>Error loading videos.</p>";
+    }
+}
+</script>-->
+
 </body>
 </html>
