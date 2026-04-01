@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Lab 4</title>
+        <link rel = "stylesheet" href = "lab4.css">
+    </head>
+    <body>
+        <h1 id = "header">INST377 - Lab 4</h1>
+            <div class = "left-boxes">
+             <div class = "name-area">
+            <form name = "nameForm" onsubmit = "return formValid()">
+                <label for = "name"> Name: </label>
+                <input type = "text" name = "name" id = "name" required>
+                <input type = "submit" value = "Alert Me!">
+            </form>
+        </div>
+        <div class = "text-tester">
+            <form name = "textForm" onsubmit = "return validate()">
+                <label for = "text"> Text Tester: </label>
+                <input type = "text" name = "text" id = "text-tester">
+                <input type = "submit" value = "Validate Text" >
+            </form>
+        </div>
+     </div>
+
+     <div class = "right-boxes">
+     <div class = "color-button">
+        <button onclick = "changeColor()">Change Color</button>
+    </div>
+    <div class = "text-button">
+        <button onclick = "addText()">Add Text</button>
+    </div>
+    </div>  
+    
+    <script type = "text/javascript">
+        const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+        function changeColor() {
+            console.log('here')
+                if(document.body.style.backgroundColor == 'lightpink') {
+                    document.body.style.backgroundColor = 'white';
+                } else {
+                    document.body.style.backgroundColor = 'lightpink';
+                }
+                
+                
+            }
+
+        function addText() {
+            document.getElementById("header").innerHTML += " Add Text!"
+        }
+
+        function formValid() {
+            alert("Hi");
+            alert(document.nameForm.name.value);
+            document.getElementById("name").value
+            
+        }
+
+        function validate(){
+            if(validationRegex.test(document.textForm.text.value)) {
+                    alert('You cannot input anything with special characters!')
+                    return false
+
+             } 
+                return true;
+             }
+        
+    </script>
+
+
+    </body>
+</html>

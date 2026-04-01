@@ -1,0 +1,55 @@
+body {
+    background-color: purple;
+    padding-bottom: 50px;
+}
+
+nav {
+    background-color: lightblue; 
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    padding: 5px 10px;
+    border-radius: 5px; 
+}
+
+
+nav ul li:hover a {
+    background-color: lightgrey; 
+    color: black; 
+}
+
+p {
+    color : white;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+#bar {
+    position: absolute; /* Or 'fixed' if you want it to stay on screen while scrolling */
+    bottom: 0;
+    width: 100%;
+    background-color: #d3d3d3; /* Light grey color */
+    text-align: center;
+    padding: 10px 0; /* Add some padding for better spacing */
+}

@@ -1,0 +1,65 @@
+body {
+    background-color: purple;
+}
+
+#main-nav {
+    background-color: lightcyan;
+    padding: 10px 0;
+    text-align: center;
+    animation: slideDown 1s ease-in-out;
+}
+
+#main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+#main-nav ul li {
+    margin: 0 15px;
+}
+
+#main-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+    animation: bounceIn 0.8s ease;
+}
+
+#main-nav a:hover {
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    animation: pulse 0.5s infinite;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+  
+#results img {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+  
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #45a049;
+}

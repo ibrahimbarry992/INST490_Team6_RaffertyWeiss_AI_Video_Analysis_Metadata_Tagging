@@ -1,0 +1,54 @@
+body {
+    background-color: purple;
+}
+
+
+nav {
+    background-color: lightblue; 
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    padding: 5px 10px;
+    border-radius: 5px; 
+}
+
+
+nav ul li:hover a {
+    background-color: lightgrey; 
+    color: black; 
+}
+
+.main h1{
+    text-align: center;
+    color: white;
+}
+
+.main p{
+    text-align: center;
+    color: white;
+}
+
+canvas {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white; 
+    border-radius: 10px;
+}

@@ -1,0 +1,55 @@
+body {
+    background-color: lightpink;
+}
+
+.left-boxes{
+    width: 50%;
+    float: left;
+    margin: 0;
+}
+
+.name-area {
+    text-align: center;
+    background-color: lavender;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.text-tester{
+    text-align: center;
+    background-color: lavender;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.right-boxes{
+    width: 50%;
+    float: right;
+    margin: 0;
+}
+
+.color-button{
+    text-align: center;
+    background-color: lavender;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.text-button {
+    text-align: center;
+    background-color: lavender;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+}

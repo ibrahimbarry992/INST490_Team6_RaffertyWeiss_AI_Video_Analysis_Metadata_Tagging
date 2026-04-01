@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Product Demo</title>
+    </head>
+    <body>
+        <h1>Find the Product</h1>
+        <form action = "https://inst377-lab4-server.vercel.app/api/product" method = "GET">
+            <label for = "name">Name:</label>
+            <input type = "text" name = "name" required>
+            <br>
+            <select name = "productId">
+                <option value = "1">Pixel</option>
+                <option value = "2">iphone 12 Mini</option>
+                <option value = "3">iphone 12 Pro</option>
+                <option value = "4"> iphone 11</option>
+            </select>
+            <br>
+            <button type = "submit">SUBMIT</button>
+        </form>
+        <br>
+        <hr>
+        <br>
+        <h1>Create Product</h1>
+        <form action = "https://inst377-lab4-server.vercel.app/api/product" method = "POST">
+            <label for = "name">Name:</label>
+            <input type = "text" name = "name" required>
+            <br>
+            <label for = "productName">Product Name:</label>
+            <input type = "text" name = "productName" required>
+            <br>
+            <label for = "productDescription">Product Description:</label>
+            <input type = "text" name = "productDescription" required>
+            <br>
+            <label for = "productPrice">Product Price:</label>
+            <input type = "text" name = "productPrice" required>
+            <br>
+            <button type = "submit" name = "submitProduct">SUBMIT</button>
+
+        </form>
+
+    </body>
+</html>

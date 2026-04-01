@@ -10,13 +10,89 @@
   </header>
 <body>
     <h1>Search Videos by Tags</h1>
+
+    <h2>Search Filters</h2>
+    <div class="filters-container">
+
+        <div class="filter-row">
+          <div class="filter-group">
+            <label for="contentType">Content Type:</label>
+            <select id="contentType" name="contentType">
+              <option value="">--Select--</option>
+              <option value="Video">Video</option>
+              <option value="Photo">Photo</option>
+            </select>
+          </div>
+      
+          <div class="filter-group">
+            <label for="primarySubject">Primary Subject:</label>
+            <select id="primarySubject" name="primarySubject">
+              <option value="">--Select--</option>
+              <option value="Real Estate">Real Estate</option>
+              <option value="Mental Health">Mental Health</option>
+              <option value="PSA">PSA</option>
+              <option value="Education">Education</option>
+            </select>
+          </div>
+        </div>
+      
+        <div class="filter-row">
+          <div class="filter-group">
+            <label for="industrySector">Industry Sector:</label>
+            <select id="industrySector" name="industrySector">
+              <option value="">--Select--</option>
+              <option value="Nonprofit">Nonprofit</option>
+              <option value="Government">Government</option>
+              <option value="Healthcare">Healthcare</option>
+              <option value="Sports">Sports</option>
+            </select>
+          </div>
+      
+          <div class="filter-group">
+            <label for="targetAudience">Target Audience:</label>
+            <select id="targetAudience" name="targetAudience">
+              <option value="">--Select--</option>
+              <option value="General Public">General Public</option>
+              <option value="Business2Business Decision Makers">Business2Business Decision Makers</option>
+              <option value="Adults">Adults</option>
+              <option value="Seniors">Seniors</option>
+            </select>
+          </div>
+        </div>
+      
+        <div class="filter-row">
+          <div class="filter-group">
+            <label for="language">Language:</label>
+            <select id="language" name="language">
+              <option value="">--Select--</option>
+              <option value="English">English</option>
+              <option value="Spanish">Spanish</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+      
+          <div class="filter-group">
+            <label for="hasCaptions">Has Captions:</label>
+            <select id="hasCaptions" name="hasCaptions">
+              <option value="">--Select--</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+        </div>
+      
+      </div>
+
+    <div id = "results">
+        <!--filtered results show up here-->
+    </div>
+
     <div class = "search-container">
         <input type="text" id="searchInput" placeholder="Enter tag...">
         <button onclick="searchVideos()">Search</button>
     </div>
 
     <footer class="footer">Created by Team 6: Rafferty Weiss AI Video Analysis and Metadata Tagging</footer>
-    <div id="results"></div>
     
 
 <!--possible search function

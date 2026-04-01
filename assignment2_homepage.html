@@ -1,0 +1,50 @@
+<html>
+    <title>INST377 - Activities</title>
+    <head>
+        <link rel="stylesheet" href="homepage.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script defer src="homepage.js"></script>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="assignment2_homepage.html">Home</a></li>
+                <li><a href="assignment2_stocks.html">Stocks</a></li>
+                <li><a href="assignment2_dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Main Content -->
+        <main>
+            <h1>INST377 - Activities</h1>
+            <p>These are some different activities we can try!</p>
+            <div class="button-container">
+                <button class="custom-btn" onclick="window.location.href='assignment2_stocks.html'">Stocks</button>
+                <button class="custom-btn" onclick="window.location.href='assignment2_dogs.html'">Dogs</button>
+            </div>
+    
+            <!-- Quote Section -->
+            <div class="quote-section">
+                <h2>Quote of the Page Load</h2>
+                <p id="quote">Loading a motivational quote...</p>
+                <p id="author"></p>
+            </div>
+        </main>
+    
+        <!-- Audio Instructions -->
+        <div id="audio-controls">
+            <p>
+                <strong>In this web page there are options to Navigate using Audio!</strong><br>
+                - Navigate to a Different Page<br>
+                Say: "Navigate to &lt;page&gt;"<br>
+                - Change the Page Color<br>
+                Say: "Change the color to &lt;color&gt;"<br>
+                - Hello Back to You!<br>
+                Say: "Hello"
+            </p>
+            <button id="audio-on">Turn On Listening</button>
+            <button id="audio-off">Turn Off Listening</button>
+        </div>
+    </body>
+</html>

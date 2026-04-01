@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>INST 377 - Contact Page</title>
+        <link rel = "stylesheet" href= "assignment1_page2.css">
+    </head>
+    <body>
+        <!--Navigation Menu-->
+        <header id = "bar">
+            <h1>Contact Page!</h1>
+        </header>
+        <nav id = "main-nav">
+            <ul>
+                <li><a href = "assignment1_page1.html">Home</a></li>
+                <li><a href= "assignment1_page3.html">Games</a></li>
+                <li><a href = "assignment1_page2.html">Contact Me!</a></li>
+            </ul>
+        </nav>
+        <h1>Have Questions? Reach Out!</h1>
+        <form name = "contactForm" method = "get" action ="assignment1_success.html" onsubmit="return validate()">
+        <label for = "name">Name: </label>
+        <input type = "text" id = "name" required>
+        <br>
+        <label for = "date">Date: </label>
+        <input type = "date" id = "date" required>
+        <br>
+        <label for = "concern">Concern: </label>
+        <textarea id = "concern" name="concern" rows="4" cols="50" required></textarea>
+        <br>
+        <input type = "submit">      
+    
+        </form>
+        <!--Footer-->
+     <footer id = "bar">
+        <p>Copyright of Someone, Somewhere</p>
+    </footer>
+    <script type = "text/javascript">
+        const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+        function validate(){
+            if(validationRegex.test(document.contactForm.concern.value)) {
+                    alert('You cannot input anything with special characters!')
+                    return false
+
+             } 
+                return true;
+             }
+            
+        
+        
+    </script>
+    </body>
+</html>
